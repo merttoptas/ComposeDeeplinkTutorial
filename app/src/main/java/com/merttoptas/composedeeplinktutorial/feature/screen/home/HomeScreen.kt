@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 
 /**
  * Created by mertcantoptas on 19.03.2023
@@ -52,6 +53,6 @@ fun Content(modifier: Modifier = Modifier, deepLinkData: String? = null) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "This is Home Screen $deepLinkData  ", color = Color.Blue)
+        Text(text = "This is Home Screen $deepLinkData",modifier = Modifier.testTag("dashboardDeeplinkArgument"), color = Color.Blue)
     }
 }

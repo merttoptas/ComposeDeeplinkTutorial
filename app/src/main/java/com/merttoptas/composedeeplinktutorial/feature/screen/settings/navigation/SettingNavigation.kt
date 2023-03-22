@@ -3,7 +3,7 @@ package com.merttoptas.composedeeplinktutorial.feature.screen.settings.navigatio
 import android.content.Intent
 import androidx.navigation.*
 import androidx.navigation.compose.composable
-import com.merttoptas.composedeeplinktutorial.feature.screen.settings.SettingsScreen
+import com.merttoptas.composedeeplinktutorial.feature.screen.settings.SettingsScreenRoute
 
 /**
  * Created by mertcantoptas on 22.03.2023
@@ -30,6 +30,6 @@ fun NavGraphBuilder.settingsScreen() {
         )
     ) { navBackStackEntry ->
         val argument = navBackStackEntry.arguments?.getString("id")
-        SettingsScreen(deepLinkData = argument)
+        SettingsScreenRoute(deepLinkData = argument)
     }
 }
